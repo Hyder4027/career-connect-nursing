@@ -1,3 +1,5 @@
+// 
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Heart, Globe, Users, Shield } from "lucide-react";
@@ -14,11 +16,19 @@ const Welcome = () => {
             <Heart className="w-6 h-6 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-foreground">CareConnect</h1>
+            <h1 className="text-2xl font-bold text-foreground">Sehat Meyer</h1>
             <p className="text-xs text-muted-foreground">Nursing Careers Germany</p>
           </div>
         </div>
-        <LanguageSelector />
+        <div className="flex items-center gap-4">
+          <LanguageSelector />
+          <Link to="/register">
+            <Button variant="hero" size="lg">Register</Button>
+          </Link>
+          <Link to="/login">
+            <Button variant="soft" size="lg">Login</Button>
+          </Link>
+        </div>
       </header>
 
       {/* Hero Section */}
@@ -27,7 +37,7 @@ const Welcome = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h2 className="text-5xl lg:text-8xl font-bold text-foreground leading-tight">
                 Welcome!
                 <br />
                 <span className="text-primary">Start your career</span>
@@ -39,22 +49,8 @@ const Welcome = () => {
               </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="space-y-4">
-              <Link to="/register" className="block">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
-                  Start Registration
-                </Button>
-              </Link>
-              <Link to="/login" className="block">
-                <Button variant="soft" size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
-                  Login to Account
-                </Button>
-              </Link>
-            </div>
-
             {/* Social Login Options */}
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="flex-1 h-px bg-border"></div>
                 <span className="text-sm text-muted-foreground">Or continue with</span>
@@ -75,7 +71,7 @@ const Welcome = () => {
                   Apple
                 </Button>
               </div>
-            </div>
+            </div> */}
 
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 pt-8">
@@ -109,7 +105,7 @@ const Welcome = () => {
       </main>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 mt-16">
+      {/* <footer className="container mx-auto px-4 py-8 mt-16">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div className="flex gap-6">
             <Link to="/terms" className="hover:text-foreground transition-smooth">
@@ -121,9 +117,9 @@ const Welcome = () => {
           </div>
           <p>&copy; 2024 CareConnect. All rights reserved.</p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
 
-export default Welcome;
+export default Welcome;
