@@ -93,44 +93,29 @@ const RegisterStep2 = () => {
           </CardHeader>
 
           <CardContent className="space-y-6">
-            {/* Verification Method Selection */}
-            <div className="space-y-4">
-              <Label>Choose verification method:</Label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div 
-                  className={`p-4 rounded-lg border-2 cursor-pointer transition-smooth ${
-                    verificationMethod === 'email' 
-                      ? 'border-primary bg-primary/5' 
-                      : 'border-border hover:border-primary/50'
-                  }`}
-                  onClick={() => setVerificationMethod('email')}
-                >
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-primary" />
-                    <div>
-                      <p className="font-medium">Email Verification</p>
-                      <p className="text-sm text-muted-foreground">john@example.com</p>
-                    </div>
-                  </div>
-                </div>
-                <div 
-                  className={`p-4 rounded-lg border-2 cursor-pointer transition-smooth ${
-                    verificationMethod === 'sms' 
-                      ? 'border-primary bg-primary/5' 
-                      : 'border-border hover:border-primary/50'
-                  }`}
-                  onClick={() => setVerificationMethod('sms')}
-                >
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <div>
-                      <p className="font-medium">SMS Verification</p>
-                      <p className="text-sm text-muted-foreground">+49 123 *** **90</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  {/* Verification Method Selection */}
+  <div className="space-y-4">
+    <Label>Choose verification method:</Label>
+    <div className="flex justify-center">
+      <div
+        className={`p-4 rounded-lg border-2 cursor-pointer transition-smooth ${
+          verificationMethod === 'email'
+            ? 'border-primary bg-primary/5'
+            : 'border-border hover:border-primary/50'
+        }`}
+        onClick={() => setVerificationMethod('email')}
+      >
+        <div className="flex items-center gap-3">
+          <Mail className="w-5 h-5 text-primary" />
+          <div>
+            <p className="font-medium">Email Verification</p>
+            <p className="text-sm text-muted-foreground">john@example.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{/* </CardContent> */}
 
             {/* OTP Input */}
             <div className="space-y-4">

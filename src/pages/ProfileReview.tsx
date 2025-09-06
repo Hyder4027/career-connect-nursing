@@ -30,10 +30,10 @@ const ProfileReview = () => {
                   <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</div>
                   <p>You'll receive an email notification once your profile is approved</p>
                 </div>
-                <div className="flex items-start gap-3">
+                {/* <div className="flex items-start gap-3">
                   <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</div>
                   <p>Start browsing and applying for nursing positions in Germany</p>
-                </div>
+                </div> */}
               </div>
             </div>
 

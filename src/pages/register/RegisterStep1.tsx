@@ -190,7 +190,7 @@ const RegisterStep1 = () => {
             </div>
 
             {/* Social Login Option */}
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="flex-1 h-px bg-border"></div>
                 <span className="text-sm text-muted-foreground">Or sign up with</span>
@@ -211,7 +211,7 @@ const RegisterStep1 = () => {
                   Apple
                 </Button>
               </div>
-            </div>
+            </div> */}
 
             {/* Navigation */}
             <div className="flex justify-between items-center pt-6">
