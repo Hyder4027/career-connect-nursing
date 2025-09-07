@@ -10,6 +10,7 @@ import RegisterStep2 from "./pages/register/RegisterStep2";
 import RegisterStep3 from "./pages/register/RegisterStep3";
 import ProfileReview from "./pages/ProfileReview";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,8 @@ const App = () => (
           <Route path="/register/step3" element={<RegisterStep3 />} />
           <Route path="/profile-review" element={<ProfileReview />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/dashboard" element={<Dashboard />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
