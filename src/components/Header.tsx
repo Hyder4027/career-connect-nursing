@@ -3,22 +3,41 @@ import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { LogOut, Settings, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+   const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    // Clear any auth tokens or user data here if needed
+    // localStorage.removeItem("authToken");
+
+    navigate("/"); // Redirect to Welcome page
+  };
   return (
     <header className="bg-card border-b border-border shadow-soft">
+      {/* // <header className="bg-zinc-800 border-b border-gray-200 shadow-sm"> */}
+
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Profile Section */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Avatar className="h-16 w-16 border-2 border-primary/20">
-              <AvatarImage src="/placeholder.svg" alt="John Doe" />
+              {/* <AvatarImage src="/placeholder.svg" alt="John Doe" /> */}
+              {/* <AvatarImage src="https://i.pravatar.cc/150?u=john.doe" alt="John Doe" /> */}
+              <AvatarImage
+  src="https://api.dicebear.com/7.x/avataaars/svg?seed=JohnDoe&backgroundColor=lightgray"
+  alt="John Doe"
+/>
+
+
               <AvatarFallback className="bg-primary/10 text-primary text-lg font-semibold">JD</AvatarFallback>
             </Avatar>
             
             <div className="text-center sm:text-left">
               <h1 className="text-xl font-semibold text-foreground">John Doe</h1>
-              <p className="text-sm text-muted-foreground">Registered Nurse Candidate</p>
+              {/* <p className="text-sm text-muted-foreground">Registered Nurse Candidate</p> */}
               
               {/* Progress Bar */}
               <div className="mt-3 w-full sm:w-64">
@@ -40,11 +59,14 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
-                <DropdownMenuItem>
+                {/* <DropdownMenuItem>
                   <Settings className="mr-2 h-4 w-4" />
                   Profile Settings
-                </DropdownMenuItem>
-                <DropdownMenuItem className="text-destructive">
+                </DropdownMenuItem> */}
+                <DropdownMenuItem
+                  className="text-destructive"
+                  onClick={handleSignOut}
+                >
                   <LogOut className="mr-2 h-4 w-4" />
                   Sign Out
                 </DropdownMenuItem>
