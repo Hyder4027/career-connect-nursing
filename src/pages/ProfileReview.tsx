@@ -62,7 +62,7 @@ const ProfileReview = () => {
             </div>
 
             <div className="pt-4">
-              <Link to="/" className="block">
+              <Link to="/dashboard" className="block">
                 <Button variant="hero" size="lg" className="w-full gap-2">
                   <Home className="w-4 h-4" />
                   Return to Home
