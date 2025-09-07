@@ -9,6 +9,7 @@ import RegisterStep1 from "./pages/register/RegisterStep1";
 import RegisterStep2 from "./pages/register/RegisterStep2";
 import RegisterStep3 from "./pages/register/RegisterStep3";
 import ProfileReview from "./pages/ProfileReview";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/register/step2" element={<RegisterStep2 />} />
           <Route path="/register/step3" element={<RegisterStep3 />} />
           <Route path="/profile-review" element={<ProfileReview />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
