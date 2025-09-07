@@ -9,7 +9,7 @@ import RegisterStep1 from "./pages/register/RegisterStep1";
 import RegisterStep2 from "./pages/register/RegisterStep2";
 import RegisterStep3 from "./pages/register/RegisterStep3";
 import ProfileReview from "./pages/ProfileReview";
-import Dashboard from "./pages/Dashboard";
+// import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 
