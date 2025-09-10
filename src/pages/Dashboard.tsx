@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Header from "@/components/Header";
-import ProfileCard from "@/components/ProfileCard";
-import JobProcessTracker from "@/components/JobProcessTracker";
-import NotificationCard from "@/components/NotificationCard";
-import BottomNav from "@/components/BottomNav";
-=======
-=======
->>>>>>> b3590d1b737a681f73f56b0f3a457a85b1674f7a
+
+
+
 import Header from "../components/Header";
 import ProfileCard from "../components/ProfileCard";
 import JobProcessTracker from "../components/JobProcessTracker";
 import NotificationCard from "../components/NotificationCard";
 import BottomNav from "../components/BottomNav";
-<<<<<<< HEAD
->>>>>>> 401d692 (Added Dashboard)
-=======
->>>>>>> b3590d1b737a681f73f56b0f3a457a85b1674f7a
+
 
 const Dashboard = () => {
   return (
