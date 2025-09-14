@@ -1,8 +1,8 @@
-// 
+//
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Heart, Globe, Users, Shield } from "lucide-react";
+import { Heart, Globe, Users, Shield, QrCode } from "lucide-react";
 import heroImage from "@/assets/hero-handshake.jpg";
 import { LanguageSelector } from "@/components/LanguageSelector";
 
@@ -17,16 +17,24 @@ const Welcome = () => {
           </div>
           <div>
             <h1 className="text-2xl font-bold text-foreground">Sehat Meyer</h1>
-            <p className="text-xs text-muted-foreground">Nursing Careers Germany</p>
+            <p className="text-xs text-muted-foreground">
+              Nursing Careers Germany
+            </p>
           </div>
         </div>
         <div className="flex items-center gap-4">
           <LanguageSelector />
-          <Link to="/register">
-            <Button variant="hero" size="lg">Register</Button>
-          </Link>
+         <Link
+  to="/register"
+  onClick={() => localStorage.removeItem("registerFormData")}
+>
+  <Button variant="hero" size="lg">Register</Button>
+</Link>
+
           <Link to="/login">
-            <Button variant="soft" size="lg">Login</Button>
+            <Button variant="soft" size="lg">
+              Login
+            </Button>
           </Link>
         </div>
       </header>
@@ -71,7 +79,18 @@ const Welcome = () => {
                   Apple
                 </Button>
               </div>
-            </div> */}
+            </div> 
+
+
+
+            {/* ✅ QR Code Icon with Text */}
+            <div className="flex items-center gap-4 pt-6">
+              <QrCode className="w-16 h-16 text-primary" />
+              <p className="text-base text-muted-foreground">
+                Scan to download our app on <br />
+                <span>Play Store</span> and <span>App Store</span>
+              </p>
+            </div>
 
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 pt-8">
@@ -89,17 +108,17 @@ const Welcome = () => {
           {/* Hero Image */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-healthcare">
-              <img 
-                src={heroImage} 
+              <img
+                src={heroImage}
                 alt="Nurse and employer handshake representing trust and career opportunities"
                 className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-glow">
+            {/* <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-glow">
               <Globe className="w-8 h-8 text-accent-foreground" />
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
@@ -122,4 +141,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Welcome;

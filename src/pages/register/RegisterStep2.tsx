@@ -13,6 +13,8 @@ const RegisterStep2 = () => {
   const [isVerified, setIsVerified] = useState(false);
   const [countdown, setCountdown] = useState(60);
   const [canResend, setCanResend] = useState(false);
+const [userEmail, setUserEmail] = useState("");
+
 
   useEffect(() => {
     if (countdown > 0) {
@@ -22,6 +24,15 @@ const RegisterStep2 = () => {
       setCanResend(true);
     }
   }, [countdown]);
+
+
+  useEffect(() => {
+  const savedData = localStorage.getItem("registerFormData");
+  if (savedData) {
+    const parsed = JSON.parse(savedData);
+    setUserEmail(parsed.email || "");
+  }
+}, []);
 
   const handleVerification = () => {
     // Simulate verification
@@ -109,7 +120,7 @@ const RegisterStep2 = () => {
           <Mail className="w-5 h-5 text-primary" />
           <div>
             <p className="font-medium">Email Verification</p>
-            <p className="text-sm text-muted-foreground">john@example.com</p>
+            <p className="text-sm text-muted-foreground">{userEmail}</p>
           </div>
         </div>
       </div>
