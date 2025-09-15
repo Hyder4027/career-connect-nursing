@@ -60,7 +60,7 @@ const [userEmail, setUserEmail] = useState("");
             </div>
             <h2 className="text-2xl font-bold text-foreground mb-4">Verification Successful!</h2>
             <p className="text-muted-foreground mb-6">
-              Your account has been verified successfully. Redirecting to profile setup...
+              Your account has been verified successfully. 
             </p>
             <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
           </CardContent>
