@@ -9,9 +9,15 @@ import RegisterStep1 from "./pages/register/RegisterStep1";
 import RegisterStep2 from "./pages/register/RegisterStep2";
 import RegisterStep3 from "./pages/register/RegisterStep3";
 import ProfileReview from "./pages/ProfileReview";
+import TermsConditions from "@/pages/register/TermsConditions";
 // import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
+// import terms ``
+
+// import TermsConditions from "./pages/register/TermsConditions";
+// import { TermsConditions } from "@/pages/register/TermsConditions";
+
 
 const queryClient = new QueryClient();
 
@@ -26,6 +32,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<RegisterStep1 />} />
           <Route path="/register/step1" element={<RegisterStep1 />} />
+          <Route path="/termsconditions" element={<TermsConditions />} />
           <Route path="/register/step2" element={<RegisterStep2 />} />
           <Route path="/register/step3" element={<RegisterStep3 />} />
           <Route path="/profile-review" element={<ProfileReview />} />

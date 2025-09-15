@@ -39,7 +39,7 @@ const [userEmail, setUserEmail] = useState("");
     if (otpCode.length === 6) {
       setIsVerified(true);
       setTimeout(() => {
-        navigate("/register/step3");
+        navigate("/termsconditions");
       }, 2000);
     }
   };
