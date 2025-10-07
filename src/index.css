@@ -8,66 +8,68 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 99%;
-    --foreground: 215 25% 15%;
+    --background: 220 17% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 180 88% 33%;
+    /* Sehat Meyer Brand Colors */
+    --primary: 181 85% 52%; /* Teal #0EA5A4 */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 180 78% 45%;
+    --primary-glow: 181 75% 62%;
 
-    --secondary: 351 95% 71%;
+    --secondary: 347 77% 68%; /* Coral #FB7185 */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 97%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 220 17% 95%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 351 95% 71%;
+    --accent: 347 77% 68%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 90%;
-    --input: 215 20% 90%;
-    --ring: 180 88% 33%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 181 85% 52%;
 
     --radius: 0.75rem;
 
-    /* Hospital themed gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(180, 88%, 33%) 0%, hsl(180, 78%, 45%) 100%);
-    --gradient-hospital: linear-gradient(90deg, hsl(180, 88%, 33%) 0%, hsl(180, 78%, 45%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210, 20%, 99%) 0%, hsl(210, 20%, 97%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 98%) 100%);
+    /* Sehat Meyer Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(181, 85%, 52%) 0%, hsl(181, 75%, 62%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(347, 77%, 68%) 0%, hsl(347, 87%, 78%) 100%);
+    --gradient-teal-coral: linear-gradient(90deg, hsl(181, 85%, 52%) 0%, hsl(347, 77%, 68%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220, 17%, 98%) 0%, hsl(220, 17%, 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 17%, 98%) 100%);
+    --gradient-overlay: linear-gradient(135deg, hsl(181, 85%, 52%, 0.9) 0%, hsl(347, 77%, 68%, 0.9) 100%);
     
-    /* Healthcare shadows */
-    --shadow-healthcare: 0 10px 30px -10px hsl(180, 88%, 33%, 0.15);
-    --shadow-soft: 0 4px 20px -4px hsl(215, 30%, 70%, 0.1);
-    --shadow-glow: 0 0 40px hsl(180, 78%, 45%, 0.2);
+    /* Modern Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0, 0%, 0%, 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0, 0%, 0%, 0.1), 0 2px 4px -1px hsl(0, 0%, 0%, 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0, 0%, 0%, 0.1), 0 4px 6px -2px hsl(0, 0%, 0%, 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(0, 0%, 0%, 0.1), 0 10px 10px -5px hsl(0, 0%, 0%, 0.04);
+    --shadow-healthcare: 0 10px 30px -10px hsl(181, 85%, 52%, 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(220, 30%, 70%, 0.15);
+    --shadow-glow: 0 0 40px hsl(181, 75%, 62%, 0.3);
+    --shadow-coral: 0 10px 30px -10px hsl(347, 77%, 68%, 0.4);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
