@@ -22,6 +22,14 @@ import MyJobs from "./pages/hospital/MyJobs";
 import Applications from "./pages/hospital/Applications";
 import Profile from "./pages/hospital/Profile";
 
+// Admin / Organization Module
+import AdminLayout from "./components/admin/AdminLayout";
+import AdminOverview from "./pages/admin/AdminOverview";
+import HoldingPage from "./pages/admin/HoldingPage";
+import SubsidiariesPage from "./pages/admin/SubsidiariesPage";
+import SubsidiaryDetailPage from "./pages/admin/SubsidiaryDetailPage";
+import CandidatesPage from "./pages/admin/CandidatesPage";
+
 
 const queryClient = new QueryClient();
 
@@ -51,7 +59,16 @@ const App = () => (
           <Route path="/hospital/jobs" element={<MyJobs />} />
           <Route path="/hospital/applications" element={<Applications />} />
           <Route path="/hospital/profile" element={<Profile />} />
-          
+
+          {/* Admin / Organization Routes */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminOverview />} />
+            <Route path="holding" element={<HoldingPage />} />
+            <Route path="subsidiaries" element={<SubsidiariesPage />} />
+            <Route path="subsidiaries/:id" element={<SubsidiaryDetailPage />} />
+            <Route path="candidates" element={<CandidatesPage />} />
+          </Route>
+
           {/* 404 Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
